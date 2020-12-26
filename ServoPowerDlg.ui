@@ -1,0 +1,642 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ServoPowerDlg</class>
+ <widget class="QDialog" name="ServoPowerDlg">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>692</width>
+    <height>275</height>
+   </rect>
+  </property>
+  <property name="font">
+   <font>
+    <pointsize>20</pointsize>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>伺服电源管理</string>
+  </property>
+  <layout class="QHBoxLayout" name="horizontalLayout_5">
+   <item>
+    <layout class="QVBoxLayout" name="verticalLayout_3">
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_4">
+       <item>
+        <widget class="QGroupBox" name="groupBox">
+         <property name="title">
+          <string/>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout">
+          <item>
+           <widget class="LightPoint" name="lpStatus">
+            <property name="font">
+             <font>
+              <pointsize>9</pointsize>
+             </font>
+            </property>
+            <property name="bgColor">
+             <color>
+              <red>66</red>
+              <green>255</green>
+              <blue>53</blue>
+             </color>
+            </property>
+            <property name="title">
+             <string>伺服</string>
+            </property>
+            <property name="showOverlay">
+             <bool>true</bool>
+            </property>
+            <property name="triggered">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout">
+            <item>
+             <widget class="QRadioButton" name="rbTurnOff">
+              <property name="text">
+               <string>关</string>
+              </property>
+              <property name="checked">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QRadioButton" name="rbTurnOn">
+              <property name="text">
+               <string>开</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <spacer name="verticalSpacer_4">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>40</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout_2">
+         <item>
+          <spacer name="verticalSpacer">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>40</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <widget class="QSlider" name="hsVoltage">
+           <property name="maximum">
+            <number>300</number>
+           </property>
+           <property name="value">
+            <number>40</number>
+           </property>
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_2">
+           <item>
+            <widget class="QDoubleSpinBox" name="dsbVoltage">
+             <property name="alignment">
+              <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+             </property>
+             <property name="decimals">
+              <number>1</number>
+             </property>
+             <property name="maximum">
+              <double>300.000000000000000</double>
+             </property>
+             <property name="singleStep">
+              <double>0.100000000000000</double>
+             </property>
+             <property name="value">
+              <double>40.000000000000000</double>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="pbSetVoltage">
+             <property name="text">
+              <string>设定电压</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <spacer name="verticalSpacer_2">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>40</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <widget class="QSlider" name="hsCurrent">
+           <property name="maximum">
+            <number>85</number>
+           </property>
+           <property name="value">
+            <number>5</number>
+           </property>
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_3">
+           <item>
+            <widget class="QDoubleSpinBox" name="dsbCurrent">
+             <property name="alignment">
+              <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+             </property>
+             <property name="decimals">
+              <number>2</number>
+             </property>
+             <property name="maximum">
+              <double>85.000000000000000</double>
+             </property>
+             <property name="singleStep">
+              <double>0.010000000000000</double>
+             </property>
+             <property name="value">
+              <double>5.000000000000000</double>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="pbSetCurrent">
+             <property name="text">
+              <string>设定电流</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <spacer name="verticalSpacer_3">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>40</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <widget class="QLabel" name="lbStatus">
+       <property name="font">
+        <font>
+         <pointsize>8</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="Line" name="line">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <layout class="QGridLayout" name="gridLayout">
+     <item row="2" column="0">
+      <widget class="QPushButton" name="pbGetPower">
+       <property name="text">
+        <string>功率</string>
+       </property>
+       <property name="flat">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="0">
+      <widget class="QPushButton" name="pbGetRatedCurrent">
+       <property name="text">
+        <string>额定电流</string>
+       </property>
+       <property name="flat">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="3">
+      <widget class="QLabel" name="label_2">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="text">
+        <string>V</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1" colspan="2">
+      <widget class="QLCDNumber" name="lnPower">
+       <property name="font">
+        <font>
+         <pointsize>20</pointsize>
+        </font>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="1" colspan="2">
+      <widget class="QLCDNumber" name="lnRatedCurrent">
+       <property name="font">
+        <font>
+         <pointsize>20</pointsize>
+        </font>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="3">
+      <widget class="QLabel" name="label_3">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="text">
+        <string>A</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="3">
+      <widget class="QLabel" name="label_5">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="text">
+        <string>A</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1" colspan="2">
+      <widget class="QLCDNumber" name="lnCurrent">
+       <property name="font">
+        <font>
+         <pointsize>20</pointsize>
+        </font>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="3">
+      <widget class="QLabel" name="label_4">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="text">
+        <string>V</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QPushButton" name="pbGetCurrent">
+       <property name="text">
+        <string>电流</string>
+       </property>
+       <property name="flat">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="0">
+      <widget class="QPushButton" name="pbGetRatedVoltage">
+       <property name="text">
+        <string>额定电压</string>
+       </property>
+       <property name="flat">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="3">
+      <widget class="QLabel" name="label_6">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="text">
+        <string>W</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="1" colspan="2">
+      <widget class="QLCDNumber" name="lnRatedVoltage">
+       <property name="font">
+        <font>
+         <pointsize>20</pointsize>
+        </font>
+       </property>
+       <property name="smallDecimalPoint">
+        <bool>true</bool>
+       </property>
+       <property name="digitCount">
+        <number>5</number>
+       </property>
+       <property name="segmentStyle">
+        <enum>QLCDNumber::Filled</enum>
+       </property>
+       <property name="value" stdset="0">
+        <double>5.000000000000000</double>
+       </property>
+       <property name="intValue" stdset="0">
+        <number>5</number>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="0">
+      <widget class="QPushButton" name="pbGetVoltage">
+       <property name="text">
+        <string>电压</string>
+       </property>
+       <property name="flat">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1" colspan="2">
+      <widget class="QLCDNumber" name="lnVoltage">
+       <property name="font">
+        <font>
+         <pointsize>20</pointsize>
+        </font>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="1">
+      <spacer name="horizontalSpacer">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeType">
+        <enum>QSizePolicy::Minimum</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>140</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>LightPoint</class>
+   <extends>QWidget</extends>
+   <header>LightPoint.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>rbTurnOff</sender>
+   <signal>clicked()</signal>
+   <receiver>ServoPowerDlg</receiver>
+   <slot>sltPowerOff()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>29</x>
+     <y>147</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>167</x>
+     <y>221</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rbTurnOn</sender>
+   <signal>clicked()</signal>
+   <receiver>ServoPowerDlg</receiver>
+   <slot>sltPowerOn()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>98</x>
+     <y>154</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>158</x>
+     <y>197</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pbSetVoltage</sender>
+   <signal>clicked()</signal>
+   <receiver>ServoPowerDlg</receiver>
+   <slot>sltSetVoltage()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>330</x>
+     <y>70</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>315</x>
+     <y>33</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pbSetCurrent</sender>
+   <signal>clicked()</signal>
+   <receiver>ServoPowerDlg</receiver>
+   <slot>sltSetCurrent()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>318</x>
+     <y>173</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>323</x>
+     <y>199</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pbGetVoltage</sender>
+   <signal>clicked()</signal>
+   <receiver>ServoPowerDlg</receiver>
+   <slot>sltRefreshCurrent()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>491</x>
+     <y>33</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>391</x>
+     <y>23</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pbGetCurrent</sender>
+   <signal>clicked()</signal>
+   <receiver>ServoPowerDlg</receiver>
+   <slot>sltRefreshCurrent()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>465</x>
+     <y>71</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>402</x>
+     <y>104</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pbGetPower</sender>
+   <signal>clicked()</signal>
+   <receiver>ServoPowerDlg</receiver>
+   <slot>sltRefreshPower()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>504</x>
+     <y>116</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>471</x>
+     <y>225</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pbGetRatedVoltage</sender>
+   <signal>clicked()</signal>
+   <receiver>ServoPowerDlg</receiver>
+   <slot>sltRefreshRatedVoltage()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>539</x>
+     <y>161</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>551</x>
+     <y>232</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pbGetRatedCurrent</sender>
+   <signal>clicked()</signal>
+   <receiver>ServoPowerDlg</receiver>
+   <slot>sltRefreshRatedCurrent()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>522</x>
+     <y>203</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>517</x>
+     <y>237</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>hsVoltage</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>ServoPowerDlg</receiver>
+   <slot>sltSliderVoltageChanged(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>186</x>
+     <y>40</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>179</x>
+     <y>18</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>hsCurrent</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>ServoPowerDlg</receiver>
+   <slot>sltSliderCurrentChanged(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>219</x>
+     <y>145</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>236</x>
+     <y>124</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>sltPowerOff()</slot>
+  <slot>sltPowerOn()</slot>
+  <slot>sltSetVoltage()</slot>
+  <slot>sltSetCurrent()</slot>
+  <slot>sltRefreshCurrent()</slot>
+  <slot>sltRefreshVoltage()</slot>
+  <slot>sltRefreshPower()</slot>
+  <slot>sltRefreshRatedVoltage()</slot>
+  <slot>sltRefreshRatedCurrent()</slot>
+  <slot>sltSliderVoltageChanged(int)</slot>
+  <slot>sltSliderCurrentChanged(int)</slot>
+ </slots>
+</ui>
